@@ -1,7 +1,7 @@
 {
   "name": "paloma-router",
   "description": "Router for paloma",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "keywords": [
     "paloma",
@@ -12,9 +12,7 @@
     "middleware"
   ],
   "dependencies": {
-    "consolidate": "^0.13.1",
     "debug": "^2.2.0",
-    "ejs": "^2.3.4",
     "koa-compose": "^3.0.0",
     "path-to-regexp": "^1.2.1",
     "validator-it": "^1.1.0"

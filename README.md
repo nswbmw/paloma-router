@@ -15,7 +15,7 @@ app.controller('indexCtrl', function (ctx, next, indexService) {
 });
 
 app.controller('404Ctrl', function (ctx, next) {
-  ctx.body = 'Sorry';
+  ctx.body = 'Not Found: ' + ctx.path;
 });
 
 app.service('indexService', function () {
@@ -23,8 +23,6 @@ app.service('indexService', function () {
     return 'paloma';
   };
 });
-
-app.view('404View', '<h1><%= body %>, <code><%= url %></code> Not Found</h1>');
 
 app.route({
   method: 'GET',
@@ -35,15 +33,10 @@ app.route({
 app.route({
   method: 'GET',
   path: '/(.+)',
-  controller: '404Ctrl',
-  template: '404View'
+  controller: '404Ctrl'
 });
 
 app.listen(3000);
 ```
 
 More examples see [paloma-example](https://github.com/palomajs/paloma-examples).
-
-### Notes
-
-`paloma-router` not support load partials view yet, like EJS's `include`.

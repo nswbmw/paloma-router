@@ -8,10 +8,8 @@ app.controller('indexCtrl', function (ctx, next) {
 });
 
 app.controller('404Ctrl', function (ctx, next) {
-  ctx.body = 'Sorry';
+  ctx.body = 'Not Found: ' + ctx.path;
 });
-
-app.view('404View', '<h1><%= response.body %>, <code><%= request.url %></code> Not Found</h1>');
 
 app.route({
   method: 'GET',
@@ -22,8 +20,7 @@ app.route({
 app.route({
   method: 'GET',
   path: '/(.+)',
-  controller: '404Ctrl',
-  template: '404View'
+  controller: '404Ctrl'
 });
 
 app.listen(3000);
