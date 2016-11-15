@@ -1,3 +1,8 @@
+## 0.3.2/2016-11-15
+
+- update dev-deps
+- update example
+
 ## 0.3.1/2016-11-15
 
 - update deps
